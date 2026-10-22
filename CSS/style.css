@@ -4,6 +4,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    min-width: 100%;
+    min-height: 200vh;
+    background: #f5f6fa;
+}
+
 #logo {
     padding: 10px;
 }
@@ -11,12 +17,14 @@
 nav .nav-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0 10px 10px gray;
     padding: 10px;
     position: fixed;
     width: 100%;
+    z-index: 1000;
+    gap: 180px
 }
 
 .nav-items ul {
@@ -31,13 +39,92 @@ nav .nav-items {
     list-style: none;
     font-size: 23px;
     font-weight: 500;
+    padding-right: 20px;
+    transition: all 0.9s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-items ul li:hover {
+    color: white;
+    background: #3ae374;
+}
+
+#user {
+    font-size: 35px;
+
+}
+
+/* Hero section */
+.hero {
+
+    width: 100%;
+    height: 490px;
+    background: url(../images/heroimg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 69px;
+}
+
+.search {
+    border: 2px soldi black;
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    display: flex;
+
+
+
 }
 
 .search input[type='text'] {
     border: none;
     outline: none;
-    border-bottom: 3px solid black;
-    width: 250px;
+    width: 500px;
     font-size: 20px;
-    padding: 5px;
+    padding: 8px;
+    background: #f1f2f6;
+    height: 30px;
+
+}
+
+.search .btn {
+    width: 50px;
+    height: 46px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #f1f2f6;
+    border-radius: 0;
+
+
+}
+
+.hero .desc {
+    position: absolute;
+    top: 100px;
+    padding: 20px;
+}
+
+.desc p {
+    padding: 30px
+}
+
+.hero .desc .btn {
+    padding: 10px 20px;
+    background: #3ae374;
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.hero .desc .btn:hover {
+    background: white;
+    color: #3ae374;
+
 }
